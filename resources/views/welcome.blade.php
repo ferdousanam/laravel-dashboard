@@ -84,7 +84,7 @@
 
     <div class="content">
       <div class="title m-b-md">
-        {{ config('app.name', 'Laravel') }}
+        {{ project()->app_name }}
       </div>
 
       <div class="links">

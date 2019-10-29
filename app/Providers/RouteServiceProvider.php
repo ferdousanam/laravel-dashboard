@@ -15,6 +15,8 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
+    protected $admin_namespace = 'App\Http\Controllers\BackEndCon';
+    protected $dev_namespace = 'App\Http\Controllers\DevCon';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -38,6 +40,10 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
+
+        $this->mapAdminRoutes();
+
+        $this->mapDevRoutes();
 
         //
     }
@@ -69,5 +75,39 @@ class RouteServiceProvider extends ServiceProvider
              ->middleware('api')
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
+    }
+
+    /**
+     * Define the "dev" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * Dev: Ferdous Anam
+     *
+     * @return void
+     */
+    protected function mapDevRoutes()
+    {
+        Route::prefix('')
+             ->middleware('web')
+             ->namespace($this->dev_namespace)
+             ->group(base_path('routes/dev.php'));
+    }
+
+    /**
+     * Define the "admin" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * Dev: Ferdous Anam
+     *
+     * @return void
+     */
+    protected function mapAdminRoutes()
+    {
+        Route::prefix('')
+             ->middleware('web')
+             ->namespace($this->admin_namespace)
+             ->group(base_path('routes/admin.php'));
     }
 }

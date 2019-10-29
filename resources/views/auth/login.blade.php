@@ -44,7 +44,7 @@
       <div class="kt-grid__item kt-grid__item--fluid kt-grid__item--center kt-grid kt-grid--ver kt-login__content" style="background-image: url('{{ asset('uploads/project-info/login-bg.jpg') }}');">
         <div class="kt-login__section">
           <div class="kt-login__block">
-            <h3 class="kt-login__title">{{ config('app.name', 'Laravel') }}</h3>
+            <h3 class="kt-login__title">{{ project()->company_name }}</h3>
             <div class="kt-login__desc">
 
             </div>

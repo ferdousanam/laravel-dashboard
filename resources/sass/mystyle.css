@@ -1,0 +1,13 @@
+.custom-file-input-anam {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: calc(1.5em + 1.3rem + 2px);
+    margin: 0;
+    opacity: 0;
+}
+
+.avatar-upload img {
+    width: 200px;
+    max-width: 100%;
+}

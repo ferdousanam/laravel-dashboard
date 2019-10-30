@@ -1,7 +1,6 @@
 <?php
 
 use App\AdminModel\Project;
-use App\Models\Admin\ProjectDetails;
 
 function project() {
     return Project::first();

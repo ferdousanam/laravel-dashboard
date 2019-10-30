@@ -6,7 +6,7 @@ use App\DataTables\UsersDataTable;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\AdminModel\Priority;
-use App\User;
+use App\Models\Admin\User;
 
 class UsersController extends Controller
 {

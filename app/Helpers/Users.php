@@ -1,6 +1,5 @@
 <?php
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 function getLoginName() {
     return Auth::user()->name;

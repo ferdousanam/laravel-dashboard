@@ -21,7 +21,8 @@ Route::get('reboot', function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('dashboard.index'));
+//    return view('welcome');
 });
 
 // Turned off Register Routes

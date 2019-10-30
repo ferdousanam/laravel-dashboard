@@ -8,6 +8,6 @@ function project() {
 }
 
 function brandLogo() {
-    return asset('uploads/project-info/' . ProjectDetails::first()->brand_logo);
+    return asset('uploads/project-info/' . Project::first()->brand_logo);
 }
 

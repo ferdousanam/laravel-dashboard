@@ -12,8 +12,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <!--begin::Fonts -->
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
 
   <!--end::Fonts -->
 
@@ -30,7 +29,7 @@
   <!--begin::Layout Skins(used by all pages) -->
 
   <!--end::Layout Skins -->
-  <link rel="shortcut icon" href="{{asset('assets/media/logos/favicon.ico')}}"/>
+  <link rel="shortcut icon" href="{{asset('uploads/project-info/') . '/' . project()->app_icon}}"/>
 
 @stack('css')
 

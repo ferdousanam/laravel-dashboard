@@ -15,6 +15,7 @@
 // Developer Routes
 Route::group(['middleware' => ['auth:admin', 'CheckSuperUser']], function () {
     Route::get('dev-mode/{switch}', 'DevOptionController@devOptions')->name('dev-mode');
+    Route::resource('project-details', 'ProjectDetailsController');
     Route::resource('main-menu', 'MenuController');
     Route::resource('sub-menu', 'SubMenuController');
 });

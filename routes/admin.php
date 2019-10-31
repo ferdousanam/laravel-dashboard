@@ -19,7 +19,6 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::resource('user', 'UsersController');
         Route::resource('user-type', 'UserTypesController');
         Route::resource('user-priority-level', 'UserPriorityLevelController');
-        Route::resource('project-details', 'ProjectDetailsController');
     });
 
     // User Routes only auth permission

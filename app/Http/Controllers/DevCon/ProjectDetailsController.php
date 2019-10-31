@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\BackEndCon;
+namespace App\Http\Controllers\DevCon;
 
 use App\AdminModel\Project;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ProjectDetailsController extends Controller {

@@ -22,8 +22,5 @@
                 });
             });
         });
-
-        $('#user-mm').addClass('kt-menu__item--submenu kt-menu__item--open kt-menu__item--here');
-        $('#user-sm').addClass('kt-menu__item--active');
     });
 </script>

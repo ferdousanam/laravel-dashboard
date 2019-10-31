@@ -13,7 +13,7 @@
 */
 
 // Developer Routes
-Route::group(['middleware' => ['auth', 'CheckSuperUser']], function () {
+Route::group(['middleware' => ['auth:admin', 'CheckSuperUser']], function () {
     Route::get('dev-mode/{switch}', 'DevOptionController@devOptions')->name('dev-mode');
     Route::resource('main-menu', 'MenuController');
     Route::resource('sub-menu', 'SubMenuController');

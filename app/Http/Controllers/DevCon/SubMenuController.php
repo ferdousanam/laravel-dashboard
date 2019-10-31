@@ -42,6 +42,7 @@ class SubMenuController extends Controller
             'serial_no' => 'required',
             'parent_id' => 'required',
             'menu_name' => 'required',
+            'selector' => 'required',
             'route_name' => 'required',
             'status' => 'required',
         ]);
@@ -92,6 +93,7 @@ class SubMenuController extends Controller
             'serial_no' => 'required',
             'parent_id' => 'required',
             'menu_name' => 'required',
+            'selector' => 'required',
             'route_name' => 'required',
             'status' => 'required',
         ]);

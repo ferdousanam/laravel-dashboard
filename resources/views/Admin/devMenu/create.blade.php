@@ -39,6 +39,12 @@
           </div>
         </div>
         <div class="form-group row">
+          <label for="selector" class="col-2 col-form-label">Selector *</label>
+          <div class="col-10">
+            <input class="form-control" type="text" id="selector" name="selector" value="{{ old('selector') }}" placeholder="Menu ID Selector" required>
+          </div>
+        </div>
+        <div class="form-group row">
           <label for="icon" class="col-2 col-form-label">Icon Name</label>
           <div class="col-10">
             <input class="form-control" type="text" id="icon" name="icon" value="{{ old('icon') }}" placeholder="fa fa-home">

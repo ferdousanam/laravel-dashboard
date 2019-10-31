@@ -34,6 +34,12 @@
           </div>
         </div>
         <div class="form-group row">
+          <label for="selector" class="col-2 col-form-label">Selector *</label>
+          <div class="col-10">
+            <input class="form-control" type="text" id="selector" name="selector" value="{{ old('selector', $main_menu->selector) }}" placeholder="Menu ID Selector" required>
+          </div>
+        </div>
+        <div class="form-group row">
           <label for="route_name" class="col-2 col-form-label">Route Url *</label>
           <div class="col-10">
             <input class="form-control" type="text" id="route_name" name="route_name" value="{{ old('route_name', $main_menu->route_name) }}" placeholder="Route Url" required>

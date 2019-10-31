@@ -40,6 +40,7 @@ class MenuController extends Controller
         $this->validate($request, [
             'serial_no' => 'required',
             'menu_name' => 'required',
+            'selector' => 'required',
             'route_name' => 'required',
             'status' => 'required',
         ]);
@@ -89,6 +90,7 @@ class MenuController extends Controller
         $this->validate($request, [
             'serial_no' => 'required',
             'menu_name' => 'required',
+            'selector' => 'required',
             'route_name' => 'required',
             'status' => 'required',
         ]);

@@ -9,6 +9,7 @@
 @section('page_tagline', '')
 
 @section('content')
+  @include('Admin.components.delete-modal')
   @include('Admin.msg.message')
   <div class="kt-portlet kt-portlet--mobile">
     <div class="kt-portlet__head kt-portlet__head--lg">
@@ -32,41 +33,12 @@
 @endsection
 
 @push('scripts')
+  @include('Admin.scripts.delete')
   <script type="text/javascript">
-      function Delete(id) {
-          $.confirm({
-              title: 'Confirm!',
-              content: '<hr><strong class="text-danger">Are you sure to delete ?</strong><hr>',
-              buttons: {
-                  confirm: function () {
-                      $.ajax({
-                          headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}'},
-                          url: "{{url('main-menu')}}/" + id,
-                          type: 'DELETE',
-                          dataType: 'json',
-                          data: {},
-                          success: function (response) {
-                              if (response.success) {
-                                  $('#tr-' + id).fadeOut();
-                              } else {
-                                  $.alert({
-                                      title: "Whoops!",
-                                      content: "<hr><strong class='text-danger'>Something Went Wrong!</strong><hr>",
-                                      type: "red"
-                                  });
-                              }
-                          }
-                      });
-                  },
-                  cancel: function () {
-
-                  }
-              }
-          });
-      }
-
-      $('#main-menus-mm').addClass('kt-menu__item--submenu kt-menu__item--open kt-menu__item--here');
-      $('#main-menus-sm').addClass('kt-menu__item--active');
+      $(document).ready(function () {
+          $('#main-menus-mm').addClass('kt-menu__item--submenu kt-menu__item--open kt-menu__item--here');
+          $('#main-menus-sm').addClass('kt-menu__item--active');
+      });
   </script>
   <!-- Datatables -->
   <script src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
